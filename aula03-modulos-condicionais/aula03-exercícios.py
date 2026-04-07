@@ -1,7 +1,8 @@
 #EXERCÍCIO 1
-mp3 = print(input("Cole o link da música em mp3 desejada: "))
-print(f'Tocando {mp3}')
-
+# from moviepy import *
+#
+# audio = VideoFileClip("video.mp4").audio
+# audio.write_audiofile("audio.mp3")
 
 # EXERCÍCIO 2
 num = int(input("Digite um número: "))
