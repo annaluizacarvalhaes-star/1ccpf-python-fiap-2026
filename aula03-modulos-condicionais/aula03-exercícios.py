@@ -1,8 +1,33 @@
 #EXERCÍCIO 1
-# from moviepy import *
-#
-# audio = VideoFileClip("video.mp4").audio
-# audio.write_audiofile("audio.mp3")
+import pygame
+
+import pygame
+import time
+def tocar_musica(arquivo_mp3):
+    # Inicializa o mixer do pygame
+    pygame.mixer.init()
+
+    try:
+        # Carrega o arquivo
+        pygame.mixer.music.load(arquivo_mp3)
+        print(f"Reproduzindo: {arquivo_mp3}")
+
+        # Inicia a reprodução
+        pygame.mixer.music.play()
+
+        # O script precisa continuar rodando enquanto a música toca
+        while pygame.mixer.music.get_busy():
+            time.sleep(1)
+
+    except pygame.error as e:
+        print(f"Erro ao tocar o arquivo: {e}")
+
+
+if __name__ == "__main__":
+    # Substitua pelo nome do seu arquivo
+    tocar_musica("musica.crdownload")
+
+
 
 # EXERCÍCIO 2
 num = int(input("Digite um número: "))
